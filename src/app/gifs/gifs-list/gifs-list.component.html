@@ -1,2 +1,17 @@
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus sit, animi nam facilis excepturi itaque ex harum
-quibusdam unde quae. Quaerat sit distinctio, officiis veritatis dolor similique obcaecati perferendis deleniti.
+<!-- <ul>
+    <li *ngFor="let gif of results">
+        {{gif.content_description}}
+    </li>
+</ul> -->
+
+<div class="row">
+    <div *ngFor="let gif of results" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+        <div class="card ">
+            <img class="card-img-top" [src]="gif.media[0]['gif'].url" [alt]="gif.content_description">
+            <div class="card-body">
+                <p class="card-text">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
